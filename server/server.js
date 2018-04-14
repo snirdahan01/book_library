@@ -17,6 +17,9 @@ const { auth } = require('./middleware/auth');
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use(express.static('client/build')); //whenthe server request for static file (javascript,css atc) go to client/build and get it
+
+
 //===================================//
 //=============== GET ===============//
 //===================================//
@@ -175,6 +178,14 @@ app.delete('/api/delete_book', (req,res) => {
         res.json(true);
     })
 })
+
+//runs only if we are in production environment
+if(process.env.NODE_ENV === 'production'){
+    const path = require('path');
+    app.get('/*', (req,res) => { //if not find the correct api request, run this
+        res.sendfile(path.resolve(__dirname, '../client', 'build', 'index.html')); //go to index.html
+    })
+}
 
 const port = process.env.PORT || 8090; //Enviroment port for Heroku/Server.
 app.listen(port, () => {
