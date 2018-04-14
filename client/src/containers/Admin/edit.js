@@ -31,6 +31,8 @@ class EditBook extends PureComponent {
     }
 
     submitForm = (e) => {
+        console.log(this.state.formdata);
+        
         e.preventDefault();
         this.props.dispatch(updateBook(this.state.formdata)); //update the book
     }
@@ -80,9 +82,9 @@ class EditBook extends PureComponent {
                 {
                     books.updateBook ?
                         <div className="edit_confirm">
-                            Post updated, 
+                            Book updated, 
                             <Link to={`/books/${books.book._id}`}>
-                                Click here to see your updated post
+                                Click here to see your updated book
                             </Link>
                         </div>
                     : null
@@ -97,7 +99,7 @@ class EditBook extends PureComponent {
                     : null
                 }
                 <form onSubmit={this.submitForm}>
-                    <h2>Edit review</h2>
+                    <h2>Edit book</h2>
 
                     <div className="form_element">
                         <input
@@ -137,11 +139,11 @@ class EditBook extends PureComponent {
                             value={this.state.formdata.rating}
                             onChange={(event) => this.handelInput(event,'rating')}
                         >
-                            <option val="1">1 &#9734; (Rating)</option>
-                            <option val="2">2 &#9734; &#9734;</option>
-                            <option val="3">3 &#9734; &#9734; &#9734;</option>
-                            <option val="4">4 &#9734; &#9734; &#9734; &#9734;</option>
-                            <option val="5">5 &#9734; &#9734; &#9734; &#9734; &#9734;</option>
+                            <option val="1">1</option>
+                            <option val="2">2</option>
+                            <option val="3">3</option>
+                            <option val="4">4</option>
+                            <option val="5">5</option>
                         </select>
                     </div>
 
@@ -154,13 +156,13 @@ class EditBook extends PureComponent {
                         />
                     </div>
 
-                    <button type="submit">Edit review</button>
+                    <button type="submit">Edit book</button>
                     <div className="delete_post">
                         <div
                             className="button"
                             onClick={this.deletePost}
                         >
-                            Delete review
+                            Delete book
                         </div>
                     </div>
 
