@@ -43,7 +43,7 @@ class EditBook extends PureComponent {
     //redirect the user after delete the book
     redirectUser = () => {
         setTimeout(() => {
-            this.props.history.push('/user/user-reviews');
+            this.props.history.push('/user/user-books');
         }, 2000)
     }
 

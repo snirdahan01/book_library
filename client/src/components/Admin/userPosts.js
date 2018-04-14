@@ -33,8 +33,8 @@ class UserPosts extends Component {
         
         return (
             <div className="user_posts">
-               <h4>Your reviews:</h4>
-               <h5 style={{color: 'red'}}>* Click the title to edit review</h5>
+               <h4>Your books:</h4>
+               <h5 style={{color: 'red'}}>* Click the title to edit a book</h5>
                <table>
                     <thead>
                         <tr>

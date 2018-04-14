@@ -38,14 +38,14 @@ const SidenavItems = ({user}) => {
         {
             type: 'navItem',
             icon: 'file-text-o',
-            text: 'My Reviews',
-            link: '/user/user-reviews',
+            text: 'My Books',
+            link: '/user/user-books',
             restricted: true
         },
         {
             type: 'navItem',
             icon: 'far fa-file',
-            text: 'Add Reviews',
+            text: 'Add Book',
             link: '/user/add',
             restricted: true
         },
