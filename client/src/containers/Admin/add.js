@@ -57,7 +57,7 @@ class AddBook extends Component {
         return (
             <div className="rl_container article">
                 <form onSubmit={this.submitForm}>
-                    <h2>Add a review</h2>
+                    <h2>Add new book</h2>
 
                     <div className="form_element">
                         <input
@@ -97,11 +97,11 @@ class AddBook extends Component {
                             value={this.state.formdata.rating}
                             onChange={(event) => this.handelInput(event,'rating')}
                         >
-                            <option val="1">1 &#9734; (Rating)</option>
-                            <option val="2">2 &#9734; &#9734;</option>
-                            <option val="3">3 &#9734; &#9734; &#9734;</option>
-                            <option val="4">4 &#9734; &#9734; &#9734; &#9734;</option>
-                            <option val="5">5 &#9734; &#9734; &#9734; &#9734; &#9734;</option>
+                            <option val="1">1</option>
+                            <option val="2">2</option>
+                            <option val="3">3</option>
+                            <option val="4">4</option>
+                            <option val="5">5</option>
                         </select>
                     </div>
 
@@ -114,7 +114,7 @@ class AddBook extends Component {
                         />
                     </div>
 
-                    <button type="submit">Add review</button>
+                    <button type="submit">Add book</button>
                     {
                         this.props.books.newBook ?
                             this.showNewBook(this.props.books.newBook)

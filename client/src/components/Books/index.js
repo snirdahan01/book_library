@@ -21,7 +21,7 @@ class BookView extends Component {
                     <h2>{books.book.title}</h2>
                     <h5>{books.book.author}</h5>
                     <div className="br_reviewer">
-                        <span>Review by:</span> {books.reviewer.name} {books.reviewer.lastname}
+                        <span>Upload by:</span> {books.reviewer.name} {books.reviewer.lastname}
                     </div>
                 </div>
                 <div className="br_review">
